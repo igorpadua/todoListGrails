@@ -1,0 +1,35 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Data Termino</th>
+      <th scope="col">Prioridade</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Status</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Excluir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <th scope="row">{{task.id}}</th>
+      <td>{{task.nome}}</td>
+      <td>{{task.descricao}}</td>
+      <td>{{task.dataTermino | date:'dd/MM/yyyy'}}</td>
+      <td>{{task.prioridade}}</td>
+      <td>{{task.categoria}}</td>
+      <td>{{task.status}}</td>
+      <td>
+        <a class="btn btn-secondary" routerLink="/tasks/update/{{ task.id }}">
+          <i class="bi bi-pencil-square"></i>
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-danger" routerLink="/tasks/delete/{{ task.id }}">
+          <i class="bi bi-trash"></i>
+        </a>
+    </tr>
+  </tbody>
+</table>

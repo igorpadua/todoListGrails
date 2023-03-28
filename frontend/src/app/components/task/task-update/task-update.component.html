@@ -1,0 +1,32 @@
+<div class="padding-padrao">
+	<h1>Atualizar Task</h1>
+	<form>
+		<div class="mb-3">
+			<input class="form-control" placeholder="Nome" [(ngModel)]="task.nome" name="nome">
+		</div>
+		<div class="mb-3">
+			<input class="form-control" placeholder="Descrição" [(ngModel)]="task.descricao" name="descricao">
+		</div>
+		<div class="mb-3">
+			<input class="form-control" [ngModel]="task.dataTermino | date:'yyyy-MM-dd'"
+			(ngModelChange)="task.dataTermino = $event" type="date" name="startDate"/>
+		</div>
+		<div class="mb-3">
+			<input class="form-control" placeholder="Prioridade" [(ngModel)]="task.prioridade" name="prioridade" type="number" min="0" max="5">
+		</div>
+		<div class="mb-3">
+			<input class="form-control" placeholder="Categoria" [(ngModel)]="task.categoria" name="categoria">
+		</div>
+		<div class="mb-3">
+			<select class="form-select" name="task.status" [(ngModel)]="task.status">
+				<option *ngFor="let status of statusList" [value]="status">{{status}}</option>
+			</select>
+		</div>
+	</form>
+	<button type="button" class="btn btn-primary" (click)="updateTask()">
+		Salvar
+	</button>
+	<button type="button" class="btn btn-danger" (click)="cancel()">
+		Cancelar
+	</button>
+</div>
