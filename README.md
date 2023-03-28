@@ -17,5 +17,6 @@ Foi utilizado o framework Grails.
 Foi utilizado o postgresql, porém, pode ser mudado sem problemas.
 
 
-# Imagem
+# Imagem da aplicação
 
+![image](https://user-images.githubusercontent.com/40117861/228355734-5f135003-d199-41ff-8b2c-fe1f11893afe.png)
