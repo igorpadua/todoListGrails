@@ -3,7 +3,7 @@ package todolistgrails
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class TipoStatusSpec extends Specification implements DomainUnitTest<TipoStatus> {
+class TaskSpec extends Specification implements DomainUnitTest<Task> {
 
     def setup() {
     }
